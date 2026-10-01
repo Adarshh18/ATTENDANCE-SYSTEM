@@ -11,7 +11,9 @@ import type {
 } from '../types';
 import { getTodayDateStr, getCurrentMonthStr } from '../utils/dateUtils';
 
-const BASE_URL = '';
+const BASE_URL = (
+  import.meta.env.VITE_API_URL || ''
+).replace(/\/$/, '');
 
 const AUTH_TOKEN_KEY = 'banaras_hospital_admin_token';
 
