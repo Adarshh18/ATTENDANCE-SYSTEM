@@ -104,7 +104,11 @@ export function App() {
     // Real-Time Server-Sent Events (SSE) Listener
     let eventSource: EventSource | null = null;
     try {
-      eventSource = new EventSource('/api/events');
+      const apiBaseUrl = (
+  import.meta.env.VITE_API_URL || ''
+).replace(/\/$/, '');
+
+eventSource = new EventSource(`${apiBaseUrl}/api/events`);
       eventSource.addEventListener('attendance_recorded', (e: any) => {
         try {
           const data = JSON.parse(e.data);
