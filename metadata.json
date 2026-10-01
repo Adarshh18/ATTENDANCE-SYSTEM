@@ -1,0 +1,7 @@
+{
+  "name": "HospitalAI - Intelligent Staff Attendance & Workforce Monitoring",
+  "description": "AI-powered hospital staff attendance and real-time workforce visibility system with facial recognition, entry/exit tracking, attendance analytics, and Gemini AI assistant.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
